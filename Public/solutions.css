@@ -1,0 +1,85 @@
+/* General Styles for Solutions Page */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
+}
+
+#solution-content {
+    margin: 20px auto;
+    padding: 30px;
+    max-width: 900px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    color: #333;
+    overflow: hidden;
+}
+
+#solution-content h2 {
+    font-size: 28px;
+    color: #3498db;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+#solution-content p {
+    font-size: 20px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+#solution-content ul, #solution-content ol {
+    font-size: 20px;
+    margin: 20px 0;
+    padding-left: 30px;
+}
+
+#solution-content li {
+    margin-bottom: 10px;
+}
+
+#solution-content a {
+    color: #3498db;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+#solution-content a:hover {
+    color: #1e90ff;
+    text-decoration: underline;
+}
+
+/* Navigation Buttons Styles */
+.navigation-buttons {
+    text-align: center;
+    margin-top: 30px;
+}
+
+button {
+    padding: 12px 25px;
+    margin: 10px;
+    font-size: 18px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+#backToCalculatorBtn {
+    background-color: #e74c3c;
+}
+
+#backToCalculatorBtn:hover {
+    background-color: #c0392b;
+}

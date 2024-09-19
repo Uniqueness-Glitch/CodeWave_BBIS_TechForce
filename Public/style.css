@@ -1,41 +1,189 @@
-/* /public/style.css */
+/* General Styles for the Page */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
-    padding: 20px;
-    background-color: #f4f4f4;
-}
-h1 {
+    padding: 0;
+    background: url(https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) no-repeat center center fixed;
+    background-size: cover;
     color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow-y: auto;
+    position: relative;
 }
-form {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-label {
-    display: block;
-    margin-top: 10px;
-}
-input {
-    margin-top: 5px;
-    padding: 8px;
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    box-sizing: border-box;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: -1;
+    transition: opacity 0.5s ease-in-out;
 }
-button {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #5cb85c;
-    color: white;
+
+h1 {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3rem;
+    background: white; /* Gradient background */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent; /* Ensures text color is transparent to show gradient */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin: 20px 0;
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+h1:hover {
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 700px;
+    margin: 20px auto;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
+}
+
+label {
+    margin: 15px 0 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #3498db;
+    text-align: left;
+    width: 100%;
+    transition: color 0.3s ease-in-out;
+}
+
+label:hover {
+    color: #1e90ff;
+}
+
+input, select {
+    margin: 10px 0 20px;
+    padding: 15px;
+    font-size: 1rem;
+    width: 100%;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+    background-color: #f7f7f7;
+    transition: all 0.3s ease-in-out;
+}
+
+input:focus, select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.3);
+    outline: none;
+}
+
+.button{
+
+    text-decoration: none;
+}
+button , .button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 15px 25px;
+    font-size: 1rem;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
-}
-button:hover {
-    background-color: #4cae4c;
-}
-#result {
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
     margin-top: 20px;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+#result {
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    background-color: #f1c40f;
+    border: 2px solid #e67e22;
+    color: #2c3e50;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 700px;
+    margin: 20px auto;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+#result strong {
+    font-size: 2rem;
+    color: #e74c3c;
+}
+
+.success {
+    background-color: #d4edda;
+    border-color: #28a745;
+    color: #155724;
+}
+
+.failure {
+    background-color: #f8d7da;
+    border-color: #dc3545;
+    color: #721c24;
+}
+
+#backToCalculatorBtn {
+    background-color: #e74c3c;
+}
+
+#backToCalculatorBtn:hover {
+    background-color: #c0392b;
+}
+
+/* Improved button styles for navigation */
+.navigation-buttons {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.navigation-buttons button {
+    padding: 12px 25px;
+    margin: 10px;
+    font-size: 1rem;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.navigation-buttons button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
 }

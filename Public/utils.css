@@ -1,0 +1,12 @@
+.flex-box-center{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.min-height-width{
+
+    min-height: 90vh;
+    min-width: 100vw;
+}
